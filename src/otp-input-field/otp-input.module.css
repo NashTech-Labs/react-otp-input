@@ -1,0 +1,43 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.otpInputFieldWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.otpField {
+  box-sizing: border-box;
+  width: 40px;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 2px solid #bdbdbd;
+  margin: 0 4px;
+  text-align: center;
+  height: 48px;
+  font-size: 21px;
+  border-radius: 0 !important;
+}
+
+.otpField:valid {
+  border-bottom: 2px solid #0871b2;
+}
+
+.otpField:focus {
+  outline: none;
+  border-bottom: 2px solid #0871b2;
+}
+
+.otpInvalid {
+  border-bottom: 2px solid #d80028 !important;
+}
