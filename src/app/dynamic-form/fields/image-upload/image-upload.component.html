@@ -1,0 +1,21 @@
+<div class="dynamic-form-field image-upload-field">
+  <div class="image-upload-field-label">{{config.label}}</div>
+  <div class="file-upload">
+    <label [class.upload-image-bg]="url === ''" [ngStyle]="config.styles">
+      <img *ngIf="url === ''" class="upload-image-logo" src="./assets/images/cloud-computing.svg" alt="">
+      <img *ngIf="url !== ''" [src]="url" alt="uploaded image" class="img-preview">
+      <span *ngIf="url === ''">Upload image</span>
+      <input (blur)="this.onTouched()" (change)="onSelectFile($event)" [accept]=fileExtensions type="file"/>
+    </label>
+    <div class="file-upload-info">
+      <div class="file-upload-info-section">
+        <div class="file-upload-info-title">File type</div>
+        <div class="file-upload-info-desc">{{fileExtensions}}</div>
+      </div>
+      <div *ngFor="let info of config.fileUploadInfo" class="file-upload-info-section">
+        <div class="file-upload-info-title">{{info.title}}</div>
+        <div class="file-upload-info-desc">{{info.description}}</div>
+      </div>
+    </div>
+  </div>
+</div>

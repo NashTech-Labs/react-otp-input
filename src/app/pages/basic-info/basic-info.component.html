@@ -1,0 +1,12 @@
+<div class="register-form">
+  <h2>Create account</h2>
+  <h3>Step 1</h3>
+  <h1>Basic Details</h1>
+  <app-form-builder
+    submitButtonLabel="Continue"
+    (formSubmit)="onFormSubmit($event)"
+    [fields]="fields"
+    [initialFormState]="prefilledFormValues"
+  >
+  </app-form-builder>
+</div>
